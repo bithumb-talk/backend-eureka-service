@@ -1,14 +1,8 @@
 version: "3.7"
 services:
   app:
+    network_mode: host
     build: .
     restart: always
     ports:
       - "8761:8761"
-
-
-# docker network create --driver bridge bithumb-backend-net
-#networks:
-#  default:
-#    external:
-#      name: bithumb-backend-net
